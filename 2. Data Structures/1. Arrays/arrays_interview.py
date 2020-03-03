@@ -65,7 +65,11 @@ def mergeSorted(arr1, arr2):  # O(n)
 # -------------------------------------------------------------------------
 
 
-def twoSum(data, target):  # O(n^2)
+def twoSum(data, target):
+    # ANSWER 1
+    # O(n^2)
+    # Iterate looking for all occurences that sum exaclty the target value
+    '''
     for i in range(0, len(data)):
         for j in range(i+1, len(data)):
             if (data[i] + data[j] == target):
@@ -74,6 +78,24 @@ def twoSum(data, target):  # O(n^2)
             pass
         pass
     print('\nNo coincidences found\n')
+    '''
+# INPUT: [2, 4, 7, 15], target = 9
+# OUTPUT: [0, 2] => arr[0] + arr[2] => 2 + 7 = 9
+    numsDict = {}
+    for idx, num in enumerate(data):
+        # We store in the dictionary the [number: position_idx]
+        numsDict[num] = idx
+
+    for numKey in numsDict:
+        # We ask if there is any key complementary that we're situated can give us the target value
+        if (target - numKey) in numsDict:
+            print(' => ' + str([numsDict.get(numKey),
+                                numsDict.get((target - numKey))]))
+            # Retreive the values (position_idx) of the keys found
+            return [numsDict.get(numKey), numsDict.get((target - numKey))]
+
+    print('\nNo coincidences found\n')
+    return []
 
 
 # -------------------------------------------------------------------------
@@ -84,7 +106,11 @@ def twoSum(data, target):  # O(n^2)
 # -------------------------------------------------------------------------
 
 
-def maxSubArray(data):  # O(n^2)
+def maxSubArray(data):
+    # ANSWER 1
+    # O(n^2)
+    # Iterating through all sub arrays possible
+    '''
     maxValue = 0
     for start in range(0, len(data)):
         for end in range(start + 1, len(data)):
@@ -97,6 +123,18 @@ def maxSubArray(data):  # O(n^2)
 
     print(' => ' + str(maxValue))
     return maxValue
+    '''
+    # ANSWER 2
+    # O(n)
+    # Compare using dynamic programing the sums
+    maxSubArraySum = data[0]
+    currentMax = data[0]
+    for i in range(1, len(data)):
+        currentMax = max(data[i], currentMax + data[i])
+        maxSubArraySum = max(maxSubArraySum, currentMax)
+
+    print(' => ' + str(maxSubArraySum))
+    return maxSubArraySum
 
 
 # -------------------------------------------------------------------------
@@ -186,7 +224,7 @@ def rotateArray(data, k):  # O(n)
 #   2. dogs
 # -------------------------------------------------------------------------
 
-def longestWord(sen):
+def longestWord(sen):  # O(n)
     words = sen.split(' ')
     maxWord = ''
     for word in words:
@@ -236,6 +274,7 @@ def main():
     longestWord('fun&!! time')
     print(' longestWord("I love dogs") ')
     longestWord("I love dogs")
+
 
     # -------------------------------------------------------------------------
 main()
