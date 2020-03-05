@@ -1,0 +1,27 @@
+
+    1. How does JavaScript works?
+
+        * Program: Memory allocation + Parse and Excecute scripts (run instructions)
+        
+        * The JS engine (in Chrome Browser) its composed of two things:
+            > Memory Heap: Where the variables are stored
+            > Call Stack: The First In Last Out (FILO) stack to perform the operations
+                > Web API: Where all Async functions get processes (DOM, AJAX, TIMEOUT)
+                > Callback Queue (Events as OnClick(), OnLoad())
+                > Event Loop
+
+    2. JavaScript is a single threaded language that can be non-blocking? 
+        * Single threading means that JS only have one Call Stack to allocate operations
+        * Non-blockig refers to the fact that having a single Call Stack to deal with, the
+          processor never have to deal with deadlocks caused for the competing processes 
+
+
+    3. Explain the difference between Syncronous and Asyncronous?
+        * Syncronous: The instructions in the Call Stack are executed one at the time.
+        * Asyncronous: Used for big tasks or API calls, it tells the Call Stack to
+                       keep going the execution of the next operations in line, meanwhile
+                       the async operation gets done. 
+
+    4. Explain what is a Stack Overflow:
+        * Its the scenario when a function gets executed recursevly, flooding the entire
+          Call Stack of instructions without any stop condition
