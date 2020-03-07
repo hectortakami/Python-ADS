@@ -1,0 +1,42 @@
+
+
+1. What's a 'Trie'?
+    *   A 'Trie' is a variant of the Tree Data Stucture specialized in storing 
+        character references, commonly used in web browsers to autocomplete words
+        and keep track of substrings allowing the user in knowing if a string 
+        exists in a phrase or not. ( That's why it's also called Pre-fix Tree)
+
+2. What's the complexity in searching the word 'bananas' in the phrase:
+   'I love bananas, basket balls and balancing' using a Trie?
+
+                                 NULL
+                            /   |    |   \
+                    1      I    L    B    A
+                               /     |     \
+                    2         O      A      N
+                             /    /  |  \    \  
+                    3       V    N   S   L    D
+                           /     |   |   |
+                    4     E      A   K   L
+                                 |   |   |
+                    5            N   E   S
+                                 |   |
+                    6            A   T
+                                 |
+                    7            S
+
+    The complexity in searching the entire word 'bananas' is O(7) because
+    the word is 7 characters length. 
+
+    [1] 
+        To create a Trie in the first level we store as a node 
+        any different started letter in the phrase 
+
+    [2]
+        Then we keep storing by word the characters
+
+    [3]
+        In the case of a repeting prefix as 'ba' in { bananas, basket and balls}
+        the three words start from the 'A' root and then all continue its own branch
+    
+

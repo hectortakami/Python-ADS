@@ -1,0 +1,47 @@
+
+
+1. A Memory Heap is the same as the 'Heap' data structure?
+
+    * No, the Memory Heap is a region in the memory as in C language 
+      or in JavaScript runtime engine where we can store data as 
+      declarared variables. Something as 'free space' to programming. 
+
+      The data structure 'Heap' it's a variation of Trees where the data is priorized by levels
+
+      It's just coincidence that both have the same name, but they are not related... 
+      in any case the Memory Heap it's more related with the Stacks.
+
+    
+2. What's a priority queue and how it's related to Heaps?
+
+    *   The Heap implementation it's sort of a tree but besides in having 2 childrens 
+        (one less at the left and one greater at the right) it only knows that it's 
+        parent node have a bigger value and all of it's childrens are less in value than 
+        the node. 
+
+        In a Priority Queue we can model a data pattern where the nodes closer to the
+        root have more priority in order to be dispatched than the branches behind
+
+
+        EXAMPLE:
+
+                                     Flight Pilot
+                                    /             \
+                                Passenger      Passenger 
+
+            The pilot have more priority to on-board the airplane than the Passengers,
+            but if a Flight Attendant arrives the structure changes, even if she arrived
+            before the Passenger...
+
+                                     Flight Pilot
+                                    /             \
+        Flight Attendant[+]    Attendant       Passenger 
+                                   |
+                               Passenger
+
+
+                                     Flight Pilot
+                                    /            \
+        Another Passenger[+]    Attendant     Passenger 
+                                /       \   
+                           Passenger  Passenger
