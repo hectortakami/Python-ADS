@@ -1,0 +1,102 @@
+
+
+# For each of the following questions, decide the sorting algorithm that fits
+# better for any special case described.
+
+# --------------------------------------------------------------------------
+# ANSWER TO ANY INTERVIEW QUESTION 
+# WHEN REQUIRE TO IMPLEMENT SORTING ALGORITHMS
+
+1. 
+# " Beacuase we have a time constraint, I'll like to use something naive
+#   and not efficient as [ Bubble | Selection | Insertion ] Sort 
+#   instead of Merge Sort if it's OK for you, because it demands time
+#   and in the real world it will be fairly easy to implement using a library
+#   or helping us by documentation"
+
+2.
+# " Here I'm using Insertion Sort, but we can use something like Merge Sort
+#   to Divide & Conquer and make the code more efficient"
+# --------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 1: Sort 10 schools around your house by distance.
+# RESPONSE: 
+#             INSERTION SORT
+# EXPLANATION: 
+#             The input is fairly SMALL to sort them fast,
+#             the algorithm is EASY TO CODE and uses a space
+#             complexity of O(1) (maybe it's pre-sorted)
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 2: eBay sorts listings by the current Bid amount.
+# RESPONSE: 
+#               RADIX or COUNTING SORT
+# EXPLANATION: 
+#               A Bid is always an INTEGER WITH FIXED LENGTH of integers, 
+#               let's say something between 1USD or 100USD (1-3 numbers length)
+#               those algorithms work well in this type of cases
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 3: Sport scores on ESPN.
+# RESPONSE: 
+#               QUICK SORT (or Merge Sort if we don't mind the space)
+# EXPLANATION: 
+#               Depending from the sport it differs one to each other, for
+#               soccer they are integers +=1 and for tennis the sets are +=15.
+#               For any type of score will be useful and will represent the
+#               SMALLEST SPACE than if we use merge sort.
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 4: Massive database (can't fit all into memory) 
+#            needs to sort through past year's user data.
+# RESPONSE: 
+#               MERGE SORT
+# EXPLANATION: 
+#               The clue here is that we CARE ABOUT the PERFORMANCE, even
+#               when mention that can't fit in memory... this is tricky because
+#               the sorting process cannot be done in the same database right?
+# 
+#               We must care about sorting a tons of registers, that's why
+#               merge sort it's our option in here even with space complexity O(n)
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 5: Almost sorted Udemy review data needs to update and add 2 new reviews
+# RESPONSE: 
+#               INSERTION SORT
+# EXPLANATION: 
+#               The clue here is ALMOST SORTED, even when is a huge amount of data
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 6: Temperature Records for the past 50 years in Canada
+# RESPONSE: 
+#               DEPENDS
+#               1. RADIX OR COUNTING SORT (If no decimal numbers are use for the temperatures)
+#               2. QUICK SORT (for temperatures with decimal accurate)   
+# EXPLANATION: 
+#               Here we care about the TYPE of input and the HUGE AMOUNT
+#               of data to process, Quick Sort will help to retreive an 
+#               optimum IN-MEMORY SORTING for non-integer temperatures
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 7: Large user name database needs to be sorted. Data is very random.
+# RESPONSE: 
+#               MERGE SORT (If have enough memory)
+# EXPLANATION: 
+#               If memory isn't too much expensive for the machine is the 
+#               best option to guarantee the performance for larger inputs
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 8: You want to teach sorting for the first time.
+# RESPONSE:     
+#               BUBBLE SORT or SELECTION SORT
+# EXPLANATION: 
+#               They're really simple to implement and learn, but no useful at all
+# -------------------------------------------------------------------------
