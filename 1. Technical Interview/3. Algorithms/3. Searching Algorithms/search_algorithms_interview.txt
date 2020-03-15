@@ -1,0 +1,56 @@
+
+
+# For each of the following questions, decide the searching algorithm that fits
+# better for any special case described.
+
+# -------------------------------------------------------------------------
+# PROBLEM 1: If you know that the solution it's not far from the root node of the tree
+# RESPONSE: 
+#             BREADTH FIRST SEARCH (BFS)
+# EXPLANATION: 
+#             BFS starts looking by the closest nodes first
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 2: If the tree is VERY DEEP, and solutions are rare
+# RESPONSE: 
+#             BREADTH FIRST SEARCH (BFS)
+# EXPLANATION: 
+#             If the tree it's quite deep, it will take a long time to
+#             retreive an answer
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 3: If the tree is VERY WIDE (Not Binary Tree)
+# RESPONSE: 
+#             DEPTH FIRST SEARCH (DFS)
+# EXPLANATION: 
+#             If the tree it's quite wide, it will take a long time to 
+#             reach each individual level
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 4: If solutions are frequently but located (same leve) 
+#            but at the BOTTOM of the tree
+# RESPONSE: 
+#             DEPTH FIRST SEARCH (BFS)
+# EXPLANATION: 
+#             Even that are at the same level, if the BOTTOM keyword it's used
+#             we will get a better performance using DFS to look for leafs nodes
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 5: Determing wheter a PATH EXISTS OR NOT between 2 nodes
+# RESPONSE: 
+#             DEPTH FIRST SEARCH (DFS)
+# EXPLANATION: 
+#             That's the main porpouse of DFS
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROBLEM 6: Finding the SHORTEST PATH between 2 nodes
+# RESPONSE: 
+#             BREADTH FIRST SEARCH (BFS)
+# EXPLANATION: 
+#             That's the main porpouse of BFS
+# -------------------------------------------------------------------------
