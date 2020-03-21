@@ -1,0 +1,77 @@
+##################################################################
+''' STRINGS '''
+
+* Sort string by letters
+''.join(sorted('HELLO')) -> 'EHLLO'
+
+* String to char array
+list('HELLO') -> ['H', 'E', 'L', 'L', 'O']
+
+* String to Int & Int to String
+int('23') , str(23)
+
+* Reverse a string
+backWord = 'hello'[::-1] -> 'olleh'
+
+* LowerCase, UpperCase, Remove white-spaces from string
+- srt.lower()
+- srt.upper()
+- srt.remove(' ', '')
+
+##################################################################
+''' ARRAYS | LISTS '''
+
+* Initialize an empty array
+arr = [None]*3 -> [None,None,None]
+
+* Create a subarray
+subArr = arr[ startIdx : (endIdx - 1) : steps]
+
+* Reverse array
+reversedArr = arr[ : : -1]
+
+* Array contains an element
+if element in arr:
+
+### REDUCE ###
+from functools import reduce
+product = reduce((lambda x, y: x * y), [1, 2, 3, 4]) 
+        => [1 * 2 * 3 * 4] => 24
+
+### FILTER ###
+lessThanZero = list(filter(lambda x: x < 0, [-5, 2, 1, -4, 0, -7, 5, 6]))
+             => [-5, -4, -7]
+
+### MAP ###
+squared = list(map(lambda x: x**2, [1, 2, 3, 4, 5]))
+        => [1, 4, 9, 16, 25]
+
+
+##################################################################
+''' HASH MAP | DICTIONARY '''
+
+* Initialize an empty dictionary
+myDict = {}
+
+* Append to dictionary
+myDict[key] = value
+
+*** Sort by ascending keys in a dictionary ***
+for key in sorted(myDict.keys()):
+- key -> to retreive key
+- myDict[key] -> To retreive value
+
+*** Sort by ascending values in a dictionary ***
+for item in sorted(myDict.items(), key=lambda kv: (kv[1], kv[0])):
+-item[0] -> To retreive key
+-item[1] -> To retreive value
+
+
+* Get the value from an specific key
+myDict.get(key) or myDict[key]
+
+* Retreive [key:value] pair 
+myDict.items()
+
+* Retreive all the keys or all the values
+myDict.keys() and myDict.values()
